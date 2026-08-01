@@ -1,0 +1,140 @@
+/* ===================================================
+   DISCORD WEB APP 2026 - APP STYLE SYSTEM
+   Author: Pedro Zeferino da Silva
+   =================================================== */
+
+/* ---------------------------------------------------
+   1. RESET E CONFIGURAÇÕES GERAIS
+   --------------------------------------------------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Inter', system-ui, sans-serif;
+	background-color: #1e1f22;
+	color: #ffffff;
+	height: 100vh;
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* Foco visível para navegação por teclado */
+a:focus-visible {
+	outline: 3px solid #5865f2;
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* ---------------------------------------------------
+   2. BARRA SUPERIOR DO APP
+   --------------------------------------------------- */
+.app-topbar {
+	background-color: #111214;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 1rem;
+	border-bottom: 1px solid #2b2d31;
+	z-index: 100;
+}
+
+.topbar-brand {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 800;
+	font-size: 1.1rem;
+}
+
+.topbar-brand svg {
+	color: #5865f2;
+}
+
+.btn-back {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: #5865f2;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 0.4rem 1rem;
+	border-radius: 20px;
+	font-weight: 700;
+	font-size: 0.85rem;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+	background-color: #4752c4;
+	transform: translateY(-1px);
+}
+
+.topbar-status {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.85rem;
+	color: #23a55a;
+	font-weight: 600;
+}
+
+.status-dot {
+	width: 8px;
+	height: 8px;
+	background-color: #23a55a;
+	border-radius: 50%;
+	box-shadow: 0 0 8px #23a55a;
+}
+
+/* ---------------------------------------------------
+   3. CONTEÚDO PRINCIPAL (MOCKUP DO APP)
+   --------------------------------------------------- */
+.app-viewport {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	background-color: #121318;
+	overflow: auto;
+}
+
+.app-mockup-wrapper {
+	width: 100%;
+	max-width: 1400px;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+	border: 1px solid #2b2d31;
+	background-color: #2b2d31;
+}
+
+.app-mockup-img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* ---------------------------------------------------
+   4. ACESSIBILIDADE: MOVIMENTO REDUZIDO
+   --------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

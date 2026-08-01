@@ -42,12 +42,15 @@
 ```text
 discord-landing-page_2026/
 ├── index.html          # Estrutura HTML5 semântica e acessível
+├── app.html            # Web App demo (mockup da interface 2026)
 ├── css/
-│   └── style.css       # Design System, Variáveis CSS, Reset e Responsividade
+│   ├── style.css       # Design System, Variáveis CSS, Reset e Responsividade
+│   └── app.css         # Estilos do Web App (app.html)
 ├── images/
-│   ├── hero_bg.jpg     # Ilustração da Hero com comunidade Discord
-│   ├── avatar_gamer.jpg# Avatar perfil gamer
-│   └── avatar_artist.jpg# Avatar perfil artist
+│   ├── hero_bg.jpg     # Ilustração da Hero com comunidade Discord (otimizada)
+│   ├── avatar_gamer.jpg# Avatar perfil gamer (otimizado)
+│   ├── avatar_artist.jpg# Avatar perfil artist (otimizado)
+│   └── discord-2026.jpg# Mockup da interface do Web App
 └── README.md           # Documentação técnica atualizada
 ```
 

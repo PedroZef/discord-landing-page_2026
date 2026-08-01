@@ -1,154 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discord Web App 2026 - Conecte-se com sua comunidade">
-  <title>Discord - Web App (2026)</title>
-  
-  <!-- Favicon SVG Inline para evitar erro 404 no console -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 127.14 96.36' fill='%235865F2'><path d='M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.68,1.75,1.36,2.66-2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.91-72.15ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.87,53,48.83,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.11,53,91.08,65.69,84.69,65.69Z'/></svg>">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#5865f2">
+	<meta name="description" content="Discord Web App 2026 - Conecte-se com sua comunidade">
+	<meta property="og:title" content="Discord - Web App (2026)">
+	<meta property="og:description" content="Discord Web App 2026 - Conecte-se com sua comunidade">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/discord-2026.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Discord - Web App (2026)</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+	<!-- Favicon SVG Inline para evitar erro 404 no console -->
+	<link rel="icon" type="image/svg+xml"
+		href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 127.14 96.36' fill='%235865F2'><path d='M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.68,1.75,1.36,2.66-2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.91-72.15ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.87,53,48.83,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.11,53,91.08,65.69,84.69,65.69Z'/></svg>">
 
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background-color: #1e1f22;
-      color: #ffffff;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    /* BARRA SUPERIOR DO APP */
-    .app-topbar {
-      background-color: #111214;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-inline: 1rem;
-      border-bottom: 1px solid #2b2d31;
-      z-index: 100;
-    }
-
-    .topbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 1.1rem;
-    }
-
-    .topbar-brand svg {
-      color: #5865f2;
-    }
-
-    .btn-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #5865f2;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .btn-back:hover {
-      background-color: #4752c4;
-      transform: translateY(-1px);
-    }
-
-    .topbar-status {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      color: #23a55a;
-      font-weight: 600;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background-color: #23a55a;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #23a55a;
-    }
-
-    /* CONTEÚDO PRINCIPAL COM A IMAGEM DISCORD-2026.PNG */
-    .app-viewport {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      background-color: #121318;
-      overflow: auto;
-    }
-
-    .app-mockup-wrapper {
-      width: 100%;
-      max-width: 1400px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-      border: 1px solid #2b2d31;
-      background-color: #2b2d31;
-    }
-
-    .app-mockup-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-  </style>
+	<link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
 
-  <!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
-  <header class="app-topbar">
-    <a href="index.html" class="topbar-brand">
-      <svg width="28" height="28" viewBox="0 0 127.14 96.36" fill="currentColor">
-        <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.68,1.75,1.36,2.66-2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.91-72.15ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.87,53,48.83,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.11,53,91.08,65.69,84.69,65.69Z"/>
-      </svg>
-      <span>Discord Web App 2026</span>
-    </a>
+	<!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
+	<header class="app-topbar">
+		<a href="index.html" class="topbar-brand">
+			<svg width="28" height="28" viewBox="0 0 127.14 96.36" fill="currentColor" aria-hidden="true">
+				<path
+					d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.68,1.75,1.36,2.66-2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.91-72.15ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.87,53,48.83,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.11,53,91.08,65.69,84.69,65.69Z" />
+			</svg>
+			<span>Discord Web App 2026</span>
+		</a>
 
-    <div class="topbar-status">
-      <span class="status-dot"></span>
-      <span>Conectado como @usuario_2026</span>
-    </div>
+		<div class="topbar-status">
+			<span class="status-dot"></span>
+			<span>Conectado como @usuario_2026</span>
+		</div>
 
-    <a href="index.html" class="btn-back">
-      &larr; Voltar para Landing Page
-    </a>
-  </header>
+		<a href="index.html" class="btn-back">
+			&larr; Voltar para Landing Page
+		</a>
+	</header>
 
-  <!-- MOSTRADORES DA INTERFACE UTILIZANDO DISCORD-2026.PNG -->
-  <main class="app-viewport">
-    <div class="app-mockup-wrapper">
-      <img src="images/discord-2026.png" alt="Interface Discord Web App 2026" class="app-mockup-img">
-    </div>
-  </main>
+	<!-- MOSTRADORES DA INTERFACE UTILIZANDO DISCORD-2026.JPG -->
+	<main class="app-viewport">
+		<div class="app-mockup-wrapper">
+			<img src="images/discord-2026.jpg" alt="Interface Discord Web App 2026" class="app-mockup-img"
+				width="1376" height="768" fetchpriority="high">
+		</div>
+	</main>
 
 </body>
+
 </html>
